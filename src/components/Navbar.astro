@@ -1,0 +1,193 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/jhsereno-light.png";
+---
+
+<head>
+  <!-- Other head elements like meta tags and stylesheets -->
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+    defer></script>
+</head>
+<style>
+  .solid-nav {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    transition: background-color 0.2s linear;
+  }
+</style>
+<nav class="flex items-center navi bg-transparent">
+  <div
+    class="container flex flex-row my-12 max-w-screen-xl mx-auto justify-between px-8 md:px-2 md:items-center"
+  >
+    <div class="flex justify-between w-1/2 md:w-auto items-center">
+      <Image src={Logo} class="ml-2 md:ml-10 md:w-40" alt="Logo" />
+    </div>
+
+    <div
+      class="hidden items-center md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0"
+    >
+      <a
+        href="index.html"
+        class="p-2 group uppercase poppins text-xs font-semibold lg:px-4 md:mx-2 text-white"
+      >
+        MEET THE TEAM
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"
+        ></span>
+      </a>
+      <a
+        href="index.html"
+        class="p-2 group uppercase poppins text-xs font-semibold lg:px-4 md:mx-2 text-white"
+      >
+        SEARCH FOR HOMES
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"
+        ></span>
+      </a>
+      <a
+        href="index.html"
+        class="p-2 group uppercase poppins text-xs font-semibold lg:px-4 md:mx-2 text-white"
+      >
+        SERVICES
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"
+        ></span>
+      </a>
+      <a
+        href="index.html"
+        class="p-2 group uppercase poppins text-xs font-semibold lg:px-4 md:mx-2 text-white"
+      >
+        Homes Across America
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"
+        ></span>
+      </a>
+      <a
+        href="index.html"
+        class="p-2 group uppercase poppins text-xs font-semibold lg:px-4 md:mx-2 text-white"
+      >
+        TESTIMONIALS
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"
+        ></span>
+      </a>
+      <a
+        href="index.html"
+        class="p-2 group uppercase poppins text-xs font-semibold lg:px-4 md:mx-2 text-white"
+      >
+        CONTACT US
+        <span
+          class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white"
+        ></span>
+      </a>
+    </div>
+
+    <a
+      href="#"
+      title="Menu"
+      class="group flex w-12 h-auto justify-evenly flex-col gap-1.5"
+    >
+      <div
+        class="h-1 bg-white block w-full rounded-3xl transition-all duration-500 group-hover:w-11"
+      >
+      </div>
+      <div
+        class="h-1 bg-white block w-full rounded-3xl transition-all duration-500 group-hover:w-10"
+      >
+      </div>
+      <div
+        class="h-1 bg-white block w-full rounded-3xl transition-all duration-500 group-hover:w-8"
+      >
+      </div>
+    </a>
+  </div>
+</nav>
+<nav class="flex justify-between items-center">
+  <!-- Hamburger menu icon svg to trigger the slide-in menu when clicked -->
+
+  <!-- Background overlay element, will close navbar when clicked -->
+  <div
+    onclick="exitNav()"
+    id="sideBar"
+    class="fixed top-0 right-0 bg-transparent w-0 h-full overflow-x-hidden duration-500 z-50"
+  >
+    <!-- Navigation menu contents -->
+    <div
+      id="sideNav"
+      class="fixed top-0 right-0 bg-white w-0 h-full flex flex-col justify-start overflow-x-hidden duration-500 font-bold z-50"
+    >
+      <!-- Exit icon, will close navbar when clicked -->
+      <a
+        href="javascript:void(0)"
+        onclick="exitNav()"
+        class="text-3xl absolute top-0 right-0 mr-12 mt-4">&times;</a
+      >
+      <!-- Menu links -->
+      <img
+        src="/assets/logo.png"
+        class="self-center mt-24 w-20 h-10 md:h-14"
+        alt="Logo"
+      />
+      <ul
+        class="text-base mt-4 divide-y divide-solid px-6 text-gray-800 hover:text-[#19cbe4] sm:text-3xl"
+      >
+        <li class="p-2">
+          <a href="index.html" class="p-2 transition-colors duration-300"
+            >Home</a
+          >
+        </li>
+        <li class="p-2">
+          <a href="about.html" class="p-2 transition-colors duration-300"
+            >About</a
+          >
+        </li>
+        <li class="p-2">
+          <a href="shop.html" class="p-2 transition-colors duration-300">Shop</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- JavaScript for navbar functionality -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = $("#navbar-toggle");
+    const collapse = $("#navbar-collapse");
+    const sideBar = $("#sideBar");
+    const sideNav = $("#sideNav");
+    const navi = $(".navi");
+
+    // Toggle navbar
+    toggleBtn.click(function () {
+      collapse.toggleClass("hidden flex");
+    });
+
+    // Open sidebar
+    window.openNav = function () {
+      sideBar.css("width", "100%");
+      sideNav.css("width", "60%");
+    };
+
+    // Close sidebar
+    window.exitNav = function () {
+      sideBar.css("width", "0");
+      sideNav.css("width", "0");
+    };
+
+    // Handle scroll event
+    $(window).scroll(function () {
+      const height = navi.height();
+      const scrollTop = $(window).scrollTop();
+
+      if (scrollTop >= height - 40) {
+        navi.addClass("solid-nav");
+      } else {
+        navi.removeClass("solid-nav");
+      }
+    });
+  });
+</script>

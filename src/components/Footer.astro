@@ -1,0 +1,138 @@
+---
+import { Image } from "astro:assets";
+import equal from "../assets/equal-logo.png";
+import realtor from "../assets/realtor-logo.png";
+---
+
+<footer
+  class="bg-white px-12 py-8"
+  style="background-image: url('/assets/footer_bg.jpg');  "
+>
+  <div class="mx-auto w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4">
+      <div class="flex flex-col gap-8 px-4 md:px-24">
+        <h2 class="font-serif text-2xl">Julie Hansen Partnership</h2>
+        <p
+          class="fonts-poppins tracking-wide text-sm md:text-base text-justify"
+        >
+          An elite group of the East Bay’s most talented and visionary real
+          estate professionals believed buyers and sellers deserved more from
+          their real estate company. More service. More resources. More
+          integrity. More global reach. In a word, more of everything people
+          should expect when they buy or sell their homes.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4">
+          <div>
+            <h2 class="font-poppins mb-4 font-bold text-base">ADDRESS</h2>
+            <div class="flex flex-col gap-4">
+              <p class="font-poppins text-sm">
+                4733 Chabot Drive #100<br />
+                Pleasanton, CA 94588
+              </p>
+              <p class="font-poppins text-sm">
+                ​​​​​​​Julie Hansen-Orvis | CA DRE# 00934447
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-poppins mb-4 font-bold text-base">
+              CONTACT INFORMATION
+            </h2>
+            <div class="flex flex-col gap-4">
+              <p
+                class="font-poppins text-sm cursor-pointer underline-offset-4 hover:underline"
+              >
+                (925) 553-6707
+              </p>
+              <p class="font-poppins text-sm">
+                ​​​​​​luxuryhomesinwc@icloud.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row gap-4">
+          <svg
+            class="w-10 hover:fill-gray-800"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="-143 145 512 512"
+            xml:space="preserve"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M169.5,357.6l-2.9,38.3h-39.3 v133H77.7v-133H51.2v-38.3h26.5v-25.7c0-11.3,0.3-28.8,8.5-39.7c8.7-11.5,20.6-19.3,41.1-19.3c33.4,0,47.4,4.8,47.4,4.8l-6.6,39.2 c0,0-11-3.2-21.3-3.2c-10.3,0-19.5,3.7-19.5,14v29.9H169.5z"
+              ></path>
+            </g></svg
+          >
+          <svg
+            class="w-10 hover:fill-gray-800"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="-143 145 512 512"
+            xml:space="preserve"
+            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+              <path
+                d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z "
+              ></path>
+            </g></svg
+          >
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 md:gap-8 px-4 mt-12 md:mt-0 md:px-24">
+        <h2 class="font-serif text-2xl">Newsletter</h2>
+        <p class="fonts-poppins tracking-wide text-base text-justify">
+          Subscribe to our Newsletter for latest news and updates. Stay tuned!
+        </p>
+
+        <input
+          class="block w-full rounded-md border-b-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
+          placeholder="Email Address"
+        />
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" />
+          <p class="text-xs font-poppins text-justify">
+            By providing Julie Hansen Partnership your contact information, you
+            acknowledge and agree to our <span
+              class="underline underline-offset-2">Privacy Policy</span
+            > and consent to receiving marketing communications, including through
+            automated calls, texts, and emails, some of which may use artificial
+            or prerecorded voices. This consent isn’t necessary for purchasing any
+            products or services and you may opt out at any time. To opt out from
+            texts, you can reply, ‘stop’ at any time. To opt out from emails, you
+            can click on the unsubscribe link in the emails. Message and data rates
+            may apply.
+          </p>
+        </div>
+        <button
+          class="outline-none border uppercase border-black w-34 bg-tranparent px-8 py-3 md:px-8 md:py-3 lg:px-8 lg:py-4 text-base md:text-lg font-bold text-black focus:outline-none hover:bg-black hover:text-white"
+          style="transition:all .45s ease-in-out"
+        >
+          Subscribe
+        </button>
+        <div class="flex">
+          <Image src={realtor} class="ml-2 md:ml-10 w-6 md:w-8" alt="Logo" />
+          <Image src={equal} class="ml-2 md:ml-10 w-6 md:w-8" alt="Logo" />
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-8 grid-rows-1 gap-4">
+      <h1 class="font-poppins text-base md:text-lg px-4 md:px-24">
+        Website Designed & Developed by <span
+          class="underline underline-offset-2">Luxury Presence</span
+        >
+      </h1>
+      <h1 class="font-poppins text-base md:text-lg px-4 md:px-24">
+        Copyright 2024 | Privacy Policy
+      </h1>
+    </div>
+  </div>
+</footer>

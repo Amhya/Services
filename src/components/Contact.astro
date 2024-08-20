@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import Banner from "../assets/hero_banner.jpg";
+---
+
+<div class="relative w-full mt-12 md:mt-24 h-full">
+  <Image
+    style={{ width: "100vw", height: "80vh", objectFit: "cover" }}
+    src={Banner}
+    class="brightness-75"
+    alt="Logo"
+  />
+  <div class="absolute inset-0 flex flex-col items-center gap-4 justify-center">
+    <h1 class="text-4xl md:text-5xl font-serif text-white z-10">
+      Work With Us
+    </h1>
+    <hr class="w-48 h-0.5 mx-auto my-2 bg-gray-100 border-0 rounded md:my-4" />
+    <p class="text-white w-3/4 md:w-1/2 mb-6 text-center">
+      With decades of experience in luxurious Tri Valley real estate, our team
+      is here to ensure that your dreams are a reality. Let us guide you through
+      your home buying journey, contact us today!
+    </p>
+    <button
+      class="outline-none font-poppins border-2 uppercase border-white w-34 bg-tranparent px-8 py-3 md:px-8 md:py-3 lg:px-8 lg:py-4 text-base md:text-lg font-semibold text-white focus:outline-none hover:bg-white hover:text-black"
+      style="transition:all .45s ease-in-out"
+    >
+      Contact us
+    </button>
+  </div>
+</div>
